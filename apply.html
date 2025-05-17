@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Apply to Be a Tutor | Be Best Private Tutors</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .content-wrapper {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    input[type="file"] {
+      padding: 5px;
+    }
+
+    button {
+      margin-top: 25px;
+      background-color: #3498db;
+      color: white;
+      padding: 12px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 20px;
+    }
+
+    #applicant-id {
+      background: #ecf0f1;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="images/logo.png" alt="Be Best Logo" id="logo">
+  <h1>Be Best Private Tutors</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="math.html">Math</a>
+    <a href="physics.html">Physics</a>
+    <a href="chemistry.html">Chemistry</a>
+    <a href="setappointment.html">Set An Appointment</a>
+    <a href="apply.html">Become a Tutor</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <div class="content-wrapper">
+    <h2>📋 Tutor Application Form</h2>
+    <p>Fill out the form completely to apply as a tutor. Required uploads: CV, Certified Matric Certificate, and a copy of your National ID.</p>
+
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" enctype="multipart/form-data" onsubmit="generateApplicantID()">
+      
+      <label>Applicant ID:</label>
+      <div id="applicant-id">Auto-generated...</div>
+      <input type="hidden" name="applicant_id" id="hidden-id">
+
+      <label for="full-name">Full Name:</label>
+      <input type="text" name="full_name" id="full-name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" name="email" id="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" name="phone" id="phone" required>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" name="dob" id="dob" required>
+
+      <label for="subject">Subjects You Want to Teach:</label>
+      <select name="subject" id="subject" required>
+        <option value="">-- Select --</option>
+        <option value="Math">Math</option>
+        <option value="Physics">Physics</option>
+        <option value="Chemistry">Chemistry</option>
+      </select>
+
+      <label for="availability">Availability (Days and Time):</label>
+      <input type="text" name="availability" id="availability" placeholder="e.g. Weekdays 4PM–8PM" required>
+
+      <label for="experience">Tutoring Experience:</label>
+      <textarea name="experience" id="experience" rows="4" placeholder="Briefly describe your experience..." required></textarea>
+
+      <label for="cv">Upload CV (PDF/DOC):</label>
+      <input type="file" name="cv" id="cv" accept=".pdf,.doc,.docx" required>
+
+      <label for="id-copy">Upload National ID Copy (JPG/PDF):</label>
+      <input type="file" name="id_copy" id="id-copy" accept=".jpg,.jpeg,.png,.pdf" required>
+
+      <label for="matric">Upload Certified Matric Certificate (PDF):</label>
+      <input type="file" name="matric" id="matric" accept=".pdf" required>
+
+      <button type="submit">Submit Application</button>
+
+      <p class="note">Note: You must be 18+ and hold a valid Grade 12 (Matric) Certificate. Only shortlisted applicants will be contacted.</p>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 Be Best Private Tutors</p>
+</footer>
+
+<script>
+  function generateApplicantID() {
+    const randomID = 'BBPT-' + Math.floor(Math.random() * 1000000).toString().padStart(6, '0');
+    document.getElementById('hidden-id').value = randomID;
+    document.getElementById('applicant-id').textContent = randomID;
+  }
+
+  // Automatically run ID generation on page load for display
+  window.onload = generateApplicantID;
+</script>
+
+</body>
+</html>

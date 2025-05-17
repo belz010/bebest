@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Set Appointment | Be Best Private Tutors</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .content-wrapper {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      animation: fadeIn 1.2s ease-in;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    button {
+      margin-top: 25px;
+      background-color: #2980b9;
+      color: white;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #21618c;
+    }
+    .payment-section {
+      margin-top: 30px;
+      background: #f1f8f6;
+      padding: 20px;
+      border-left: 5px solid #3498db;
+      border-radius: 5px;
+    }
+    .note {
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="images/logo.png" alt="Be Best Logo" id="logo">
+  <h1>Be Best Private Tutors</h1>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="math.html">Math</a>
+    <a href="physics.html">Physics</a>
+    <a href="chemistry.html">Chemistry</a>
+    <a href="setappointment.html" class="active">Set Appointment</a>
+    <a href="apply.html">Become a Tutor</a>
+    <a href="results.html">Results</a>
+    <a href="all-activities.html">All Activities</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <div class="content-wrapper">
+    <h2>📅 Book & Pay for Your Appointment</h2>
+    <p>Each tutoring session costs <strong>R500</strong>. Use the form below to schedule your session and pay securely with your debit or credit card.</p>
+
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="subject">Subject:</label>
+      <select id="subject" name="subject" required>
+        <option value="">--Select--</option>
+        <option value="Math">Math</option>
+        <option value="Physics">Physics</option>
+        <option value="Chemistry">Chemistry</option>
+      </select>
+
+      <label for="date">Preferred Date:</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="time">Preferred Time:</label>
+      <input type="time" id="time" name="time" required>
+
+      <input type="hidden" name="payment_status" value="Paid via Stripe">
+
+      <div class="payment-section">
+        <h3>💳 Step 2: Pay with Card (R500)</h3>
+        <p>Click the button below to pay securely using your debit/credit card. A new tab will open.</p>
+        <a href="https://buy.stripe.com/test_ABC123XYZ456" target="_blank">
+          <button type="button">Pay Now with Stripe</button>
+        </a>
+      </div>
+
+      <button type="submit">Submit Booking Details</button>
+    </form>
+
+    <p class="note">Note: You must complete both the form and the Stripe payment to confirm your booking. You will receive a confirmation email after submission.</p>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 Be Best Private Tutors</p>
+</footer>
+
+</body>
+</html>

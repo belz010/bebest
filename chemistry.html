@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chemistry | Be Best Private Tutors</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .content-wrapper {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      animation: fadeIn 1.5s ease-in;
+    }
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+    iframe {
+      width: 100%;
+      height: 315px;
+      margin: 20px 0;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .quiz-area {
+      margin-top: 20px;
+      padding: 15px;
+      background: #ecf0f1;
+      border-left: 5px solid #16a085;
+    }
+    .quiz-area button {
+      margin: 5px;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .download-links a {
+      display: block;
+      margin: 5px 0;
+      color: #16a085;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="images/logo.png" alt="Be Best Logo" id="logo">
+  <h1>Be Best Private Tutors</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="math.html">Math</a>
+    <a href="physics.html">Physics</a>
+    <a href="chemistry.html">Chemistry</a>
+    <a href="setappointment.html">Set An Appointment</a>
+    <a href="apply.html">Become a Tutor</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <div class="content-wrapper">
+    <h2>⚗ Chemistry</h2>
+
+    <div class="section">
+      <h3>🧪 Atomic Structure</h3>
+      <p>Understand protons, neutrons, electrons, isotopes and the periodic table.</p>
+      <iframe src="https://www.youtube.com/embed/NsbZT9bJ1sY" title="Atomic Structure Tutorial"></iframe>
+    </div>
+
+    <div class="section">
+      <h3>🔗 Chemical Bonding</h3>
+      <p>Learn about ionic, covalent and metallic bonding with visual examples.</p>
+      <iframe src="https://www.youtube.com/embed/OTFx4VtZcXg" title="Chemical Bonding Explained"></iframe>
+    </div>
+
+    <div class="section">
+      <h3>🌿 Organic Chemistry Basics</h3>
+      <p>Explore hydrocarbons, functional groups, and reactions of organic compounds.</p>
+      <iframe src="https://www.youtube.com/embed/Ec_7QCcSgZU" title="Organic Chemistry Intro"></iframe>
+    </div>
+
+    <div class="section download-links">
+      <h3>📄 Download Chemistry Materials</h3>
+      <a href="#" target="_blank">Grade 10 Chemistry Notes (PDF)</a>
+      <a href="#" target="_blank">Grade 11 Organic Chemistry Practice (PDF)</a>
+      <a href="#" target="_blank">Grade 12 Final Exam Papers (PDF)</a>
+    </div>
+
+    <div class="section quiz-area">
+      <h3>🧠 Quick Chemistry Quiz</h3>
+      <div id="chemistry-question">What is the atomic number of Oxygen?</div>
+      <div id="chemistry-options">
+        <button onclick="checkChemAnswer('A')">6</button>
+        <button onclick="checkChemAnswer('B')">7</button>
+        <button onclick="checkChemAnswer('C')">8</button>
+        <button onclick="checkChemAnswer('D')">9</button>
+      </div>
+      <div id="chemistry-result"></div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 Be Best Private Tutors</p>
+</footer>
+
+<script>
+  function checkChemAnswer(option) {
+    const correct = 'C';
+    const result = document.getElementById('chemistry-result');
+    if (option === correct) {
+      result.innerText = '✅ Correct!';
+    } else {
+      result.innerText = '❌ That’s not it. Try again!';
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Physics | Be Best Private Tutors</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .content-wrapper {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      animation: fadeIn 1.5s ease-in;
+    }
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+    iframe {
+      width: 100%;
+      height: 315px;
+      margin: 20px 0;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .quiz-area {
+      margin-top: 20px;
+      padding: 15px;
+      background: #ecf0f1;
+      border-left: 5px solid #3498db;
+    }
+    .quiz-area button {
+      margin: 5px;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .download-links a {
+      display: block;
+      margin: 5px 0;
+      color: #3498db;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="images/logo.png" alt="Be Best Logo" id="logo">
+  <h1>Be Best Private Tutors</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="math.html">Math</a>
+    <a href="physics.html">Physics</a>
+    <a href="chemistry.html">Chemistry</a>
+    <a href="setappointment.html">Set An Appointment</a>
+    <a href="apply.html">Become a Tutor</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <div class="content-wrapper">
+    <h2>🔬 Physics</h2>
+
+    <div class="section">
+      <h3>⚙ Mechanics</h3>
+      <p>Understand Newton’s laws of motion, forces, energy, and work.</p>
+      <iframe src="https://www.youtube.com/embed/kKKM8Y-u7ds" title="Mechanics - CrashCourse Physics"></iframe>
+    </div>
+
+    <div class="section">
+      <h3>🌌 Waves and Sound</h3>
+      <p>Learn about wave properties, sound, interference, and resonance.</p>
+      <iframe src="https://www.youtube.com/embed/xvFZjo5PgG0" title="Waves Tutorial"></iframe>
+    </div>
+
+    <div class="section">
+      <h3>🔋 Electricity & Circuits</h3>
+      <p>Master current, voltage, resistance, Ohm’s law, and circuit analysis.</p>
+      <iframe src="https://www.youtube.com/embed/ZoeYpZjhSxY" title="Electric Circuits Basics"></iframe>
+    </div>
+
+    <div class="section download-links">
+      <h3>📄 Download Physics Resources</h3>
+      <a href="#" target="_blank">Physics Grade 10 Revision Notes (PDF)</a>
+      <a href="#" target="_blank">Physics Grade 11 Past Exam (PDF)</a>
+      <a href="#" target="_blank">Physics Grade 12 Definitions Summary (PDF)</a>
+    </div>
+
+    <div class="section quiz-area">
+      <h3>🧠 Quick Physics Quiz</h3>
+      <div id="physics-question">What is the unit of force?</div>
+      <div id="physics-options">
+        <button onclick="checkPhysicsAnswer('A')">Joules</button>
+        <button onclick="checkPhysicsAnswer('B')">Newtons</button>
+        <button onclick="checkPhysicsAnswer('C')">Watts</button>
+        <button onclick="checkPhysicsAnswer('D')">Volts</button>
+      </div>
+      <div id="physics-result"></div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 Be Best Private Tutors</p>
+</footer>
+
+<script>
+  function checkPhysicsAnswer(option) {
+    const correct = 'B';
+    const result = document.getElementById('physics-result');
+    if (option === correct) {
+      result.innerText = '✅ Correct!';
+    } else {
+      result.innerText = '❌ Incorrect. Try again!';
+    }
+  }
+</script>
+
+</body>
+</html>
